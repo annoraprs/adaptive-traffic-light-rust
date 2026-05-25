@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+
+firmware = "target/xtensa-esp32s3-none-elf/debug/PEMKONJOSS"
+elf = "target/xtensa-esp32s3-none-elf/debug/PEMKONJOSS"

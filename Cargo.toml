@@ -1,0 +1,27 @@
+[package]
+name = "PEMKONJOSS"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "PEMKONJOSS"
+path = "src/bin/main.rs"
+
+[dependencies]
+esp-hal = { version = "1.1.1", features = ["esp32s3", "unstable"] }
+
+esp-backtrace = { version = "0.19.0", features = [
+    "esp32s3",
+    "panic-handler",
+    "println"
+] }
+
+esp-println = { version = "0.17.0", features = ["esp32s3"] }
+
+# xtensa-lx-rt DIHAPUS — sudah otomatis lewat esp-hal
+
+[profile.dev]
+opt-level = "s"
+
+[profile.release]
+opt-level = "s"
